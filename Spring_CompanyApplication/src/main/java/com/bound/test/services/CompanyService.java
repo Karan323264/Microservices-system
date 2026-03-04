@@ -4,7 +4,6 @@ import java.util.List;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
-
 import com.bound.test.dtos.CompanyDto;
 import com.bound.test.entity.Company;
 import com.bound.test.mapper.CompanyMapper;
