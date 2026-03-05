@@ -13,5 +13,5 @@ public class JobDto {
     private String description;
     private String location;
     private Double salary;
-    private Long companyId;
+    private Integer companyId;
 }

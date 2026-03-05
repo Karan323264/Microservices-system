@@ -30,7 +30,7 @@ public class Job {
     private Double salary;
 
     @Column(nullable = false)
-    private Long companyId;
+    private Integer companyId;
 
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;

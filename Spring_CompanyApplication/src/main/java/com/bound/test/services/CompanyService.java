@@ -34,7 +34,7 @@ public class CompanyService {
 	public CompanyDto getCompanyById(Integer id) {
 		Company byId = companyRepo.findById(id)
 				.orElseThrow(()-> 
-				new ResponseStatusException(HttpStatus.BAD_REQUEST,
+				new ResponseStatusException(HttpStatus.NOT_FOUND,
 						"Company by Id: " + id + "was not found")
 				);
 		return companyMapper.toDto(byId);
@@ -43,7 +43,7 @@ public class CompanyService {
 	public CompanyDto update(Integer id, CompanyDto requestCompanyUpdate) {
 		Company existById = companyRepo.findById(id)
 				.orElseThrow(()-> 
-				new ResponseStatusException(HttpStatus.BAD_REQUEST,
+				new ResponseStatusException(HttpStatus.NOT_FOUND,
 						"Company by Id: " + id + "was not found")
 				);
 		companyMapper.toUpdate(requestCompanyUpdate, existById);
@@ -53,7 +53,7 @@ public class CompanyService {
 	public void deleteCompany(Integer id) {
 		Company existById = companyRepo.findById(id)
 				.orElseThrow(()-> 
-				new ResponseStatusException(HttpStatus.BAD_REQUEST,
+				new ResponseStatusException(HttpStatus.NOT_FOUND,
 						"Company by Id: " + id + "was not found")
 				);
 		companyRepo.delete(existById);
