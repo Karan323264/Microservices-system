@@ -1,12 +1,15 @@
-package com.bound.test.dtos;
+package com.bound.test.client.dto;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class JobDto {
+public class JobsRefDto {
 
     private Integer id;
     private String title;
@@ -14,5 +17,4 @@ public class JobDto {
     private String location;
     private Double salary;
     private Integer companyId;
-    
 }

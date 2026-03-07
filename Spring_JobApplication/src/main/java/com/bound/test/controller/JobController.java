@@ -5,6 +5,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import com.bound.test.dtos.JobDto;
+import com.bound.test.dtos.JobWithReviewsDto;
 import com.bound.test.services.JobService;
 
 @RestController
@@ -39,5 +40,16 @@ public class JobController {
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void delete(@PathVariable Integer id) {
         service.delete(id);
+    }
+    
+    @GetMapping("/company/{companyId}")
+    public List<JobDto> getJobsByCompanyId(@PathVariable Integer companyId) {
+        return service.getJobsByCompanyId(companyId);
+    }
+    
+    @GetMapping("/{jobId}/reviews")
+    public JobWithReviewsDto getJobWithReviews(
+    		@PathVariable Integer jobId) {
+    	return service.getJobWithReviews(jobId);
     }
 }
