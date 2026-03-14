@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import com.bound.test.client.dto.CompanyRefDto;
 
-@FeignClient(name = "company-service", url = "http://company-service:8082")
+@FeignClient(name = "company-service")
 public interface CompanyClient {
 
     @GetMapping("/company/{id}")

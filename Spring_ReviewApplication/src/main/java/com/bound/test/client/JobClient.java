@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import com.bound.test.client.dto.JobRefDto;
 
-@FeignClient(name = "job-service", url = "http://job-service:8081")
+@FeignClient(name = "job-service")
 public interface JobClient {
 	
 	@GetMapping("/jobs/{id}")

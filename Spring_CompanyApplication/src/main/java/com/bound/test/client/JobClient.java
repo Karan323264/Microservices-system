@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@FeignClient(name = "job-service", url = "http://job-service:8081")
+@FeignClient(name = "job-service")
 public interface JobClient {
 
     @GetMapping("/jobs/company/{companyId}")

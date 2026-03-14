@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import com.bound.test.client.dto.ReviewRefDto;
 
-@FeignClient(name = "review-service", url = "http://review-service:8083")
+@FeignClient(name = "review-service")
 public interface ReviewClient {
 	
 	@GetMapping("/review/company/{companyId}")
